@@ -10,7 +10,10 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <View style={styles.container}>
-        <Text>Hello Kitty</Text>
+        <Text style={{fontWeight: 'bold', fontSize: 30, marginBottom: 30}}>
+          Barcode Scanner
+        </Text>
+        <Text style={{marginBottom: 20}}>Tap the barcode icon and scan!</Text>
           <View style={{width: 400, height: 500}}>
             <Scanner />
           </View>
