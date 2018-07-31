@@ -4,7 +4,6 @@ export const UPC_NOT_FOUND = 'UPC_NOT_FOUND'
 export const findUPC = (code) => {
 
   return async dispatch => {
-    console.log('ccccc', code)
 
     const trimedCode = code.length > 10? code.slice(1): code
     const response = await fetch(`https://young-woodland-38521.herokuapp.com/upc/${trimedCode}`, {
@@ -15,10 +14,7 @@ export const findUPC = (code) => {
       }
     })
     
-
     const JSONres = await response.json()
-
-    console.log('jjjjjj', JSONres[0])
 
     if(JSONres[0]) {
       dispatch({
@@ -31,6 +27,5 @@ export const findUPC = (code) => {
         payload: JSONres[0]
       })
     }
-    
   }
 }

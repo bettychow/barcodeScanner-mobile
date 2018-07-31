@@ -17,9 +17,7 @@ const findUPC = (state = {upcExists: null, product_name: '', upc: ''}, action) =
         }
       default: 
         return state
-
     }
-
 }
 
 export default combineReducers({
